@@ -1,7 +1,7 @@
 total = 0
 product = 1
-smallest = None
-largest = None
+smallest = 0
+largest = 0
 
 
 for num in range(1, 5):
@@ -10,10 +10,10 @@ for num in range(1, 5):
 	total += num
 	product *= num 
 
-	if smallest == None or num < smallest:
+	if smallest == 0 or num < smallest:
 		smallest = num
 
-	if largest == None or num > largest:
+	if largest == 0 or num > largest:
 		largest = num
 
 
