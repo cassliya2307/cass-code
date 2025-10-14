@@ -1,13 +1,10 @@
-num[3,2,1]
-length = 0
-for count in range(len(num)):
-	length += 1
-print(length)
-
-
-number[3,2,5]
+number = [2,4,5,6,7]
 count = 0
 sum = 0
-for number in range(len(number)):
-	if number % 2 == 0:
-		sum += num[number]
+for num in range(len(number)):
+	if count % 2 == 0:
+		sum += number[count]
+
+	count += 1
+
+print(sum)
