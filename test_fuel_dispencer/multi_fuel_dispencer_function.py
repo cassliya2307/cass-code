@@ -4,7 +4,7 @@ def get_fuel_by_liters(number, liter, receipt = []):
 		receipt_paper = f"""
 		================================
 		= Product: Petrol	       =
-		= Amount: N{amount}	       =
+		= Amount: N{amount:<8}	       =
 		= Liters: {liter}L  	       = 
 		= Thank you for your patronage =
 		~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -18,7 +18,7 @@ def get_fuel_by_liters(number, liter, receipt = []):
 		receipt_paper = f"""
 		================================
 		= Product: Diesel	       =
-		= Amount:N{amount}	       =
+		= Amount:N{amount:<8}	       =
 		= Liters: {liter}L    	       = 
 		= Thank you for your patronage =
 		~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -32,7 +32,7 @@ def get_fuel_by_liters(number, liter, receipt = []):
 		receipt_paper = f"""
 		================================
 		= Product: Kerosene	       =
-		= Amount: N{amount}	       =
+		= Amount: N{amount:<8}	       =
 		= Liters: {liter}L     	       = 
 		= Thank you for your patronage =
 		~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -46,7 +46,7 @@ def get_fuel_by_liters(number, liter, receipt = []):
 		receipt_paper = f"""
 		================================
 		= Product: Gas  	       =
-		= Amount: N{amount}	       =
+		= Amount: N{amount:<8}	       =
 		= Liters: {liter}L    	       = 
 		= Thank you for your patronage =
 		~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -66,8 +66,8 @@ def get_fuel_by_amount(number, amount, receipt = []):
 		receipt_paper = f"""
 		================================
 		= Product: Petrol	       =
-		= Amount: N{amount} 	       =
-		= Liters: {liter}L   	       = 
+		= Amount: N{amount:<8} 	       =
+		= Liters: {liter:.2f}L         = 
 		= Thank you for your patronage =
 		~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 		"""
@@ -79,8 +79,8 @@ def get_fuel_by_amount(number, amount, receipt = []):
 		receipt_paper = f"""
 		================================
 		= Product: Diesel	       =
-		= Amount:N{amount} 	       =
-		= Liters: {liter}L             = 
+		= Amount:N{amount:<8} 	       =
+		= Liters: {liter:.2f}L         = 
 		= Thank you for your patronage =
 		~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 		"""
@@ -92,8 +92,8 @@ def get_fuel_by_amount(number, amount, receipt = []):
 		receipt_paper = f"""
 		================================
 		= Product: Kerosene	       =
-		= Amount: N{amount} 	       =
-		= Liters: {liter}L  	       = 
+		= Amount: N{amount:<8} 	       =
+		= Liters: {liter:.2f}L 	       = 
 		= Thank you for your patronage =
 		~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 		"""
@@ -105,8 +105,8 @@ def get_fuel_by_amount(number, amount, receipt = []):
 		receipt_paper = f"""
 		================================
 		= Product: Gas		       =
-		= Amount: N{amount} 	       =
-		= Liters: {liter}L             = 
+		= Amount: N{amount:<8} 	       =
+		= Liters: {liter:.2f}L         = 
 		= Thank you for your patronage =
 		~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 		"""

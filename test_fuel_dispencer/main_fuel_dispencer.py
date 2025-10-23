@@ -69,6 +69,9 @@ Available petroleum
 						case "liter":
 							kerosene_in_liters = int(input("How much kerosene are you buying(550/L): "))
 							print(get_fuel_by_liters(available_petrol_input, kerosene_in_liters, receipts))
+						case "liters":
+							kerosene_in_liters = int(input("How much kerosene are you buying(550/L): "))
+							print(get_fuel_by_liters(available_petrol_input, kerosene_in_liters, receipts))
 
 
 						case "amount":

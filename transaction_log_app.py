@@ -1,6 +1,6 @@
-def get_deposit(account_balance, amount,  transactions):
+def get_deposit(account_balance, amount,  transactions = []):
 	account_balance += amount
-	transactions = f"Deposited: N{amount} | New Balance: N{account_balance}"
+		
 	
 	return account_balance
 
@@ -8,22 +8,21 @@ def get_deposit(account_balance, amount,  transactions):
 
 
 
-def withdraw_money(account_balance,amount, transactions):
-	if amount < account_balance:
-		account_balance -= amount
-		transactions = f"Withdrew: N{amount} | New Balance: N{account_balance}"
+def withdraw_money(account_balance,amount, transactions = []):
+	if amount > account_balance:
+		account_balance = account_balance - 0
+		print("Transaction failed, Insufficient balance")
 	else:
-		account_balance = account_balance
-		transactions = f"Withdrawal failed: insufficient funds"
-
+		account_balance -= amount
+			
 	return account_balance
 
 
 
 
-
-def show_transaction_history(amount, account_balance, transactions):
-	transactions = []
+#def show_transaction_history(transactions):
+	#transactions = []
+	#return transactions
 	
 	
 
@@ -31,12 +30,13 @@ def show_transaction_history(amount, account_balance, transactions):
 
 
 
-transact = ""
+transactions = []
 balance = 0
 exit = True
 choice = 0
 
 menu = """
+~~~~~~MENU~~~~~~
 1.Deposit money
 2.Withdraw money
 3.Show transaction
@@ -48,22 +48,32 @@ while choice != 4:
 	choice = int(input("Enter your choice: "))
 	match choice:
 		case 1:
-			money = int(input("Enter deposit amount: "))
-			balance = get_deposit(balance,money, transact)
+			money = float(input("Enter deposit amount: "))
+			balance = get_deposit(balance,money)
 			print("N",balance)
+			transactions.append(f"Deposited: N{money} | New Balance: N{balance}")
+			
 			
 				
 			
 			
 		
 		case 2:
-			money = int(input("Enter withdrawal amount: "))
-			balance = withdraw_money(balance, money, transact)
-			print("N", balance)
-		
+			money = float(input("Enter withdrawal amount: "))
+			balance = withdraw_money(balance, money)
+			print("N",balance)
+			transactions.append(f"Withdrew: N{money} | New Balance: N{balance}")
+			
+
 
 		case 3:
+			if transactions == []:
+				print("No transactions made")
+			else:
+				for index in range(len(transactions)):
+					print(transactions[index])
 			
+				
 		case 4:
 			print("Your final balance is: ",balance)
 			print("Thank you for using our Transaction Log App")
@@ -71,7 +81,7 @@ while choice != 4:
 
 
 
-
+		case _:print("Invalid Input!!!")
 
 
 
