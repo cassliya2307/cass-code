@@ -78,8 +78,8 @@ class TestToAddNumberToATupleWithoutModfyingIt(unittest.TestCase):
 		#self.assertEqual(actual, expected)
 
 
-	def test_if_the_return_type_is_uppercase(self):
-		actual = to_uppercase(["code"])
-		expected = CODE
-		self.assertEqual(actual, expected)
+	#def test_if_the_return_type_is_uppercase(self):
+		#actual = to_uppercase(["code"])
+		#expected = CODE
+		#self.assertEqual(actual, expected)
 

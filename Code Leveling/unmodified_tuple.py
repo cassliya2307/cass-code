@@ -103,8 +103,12 @@ def to_uppercase(words):
 	new_list = []
 	for word in words:
 		count += 1
-		new_list.append(words[count].upper())
-	return new_list	
+		return words.upper()
+		
+
+def square(number):
+	if number >= 1 and number <= 10:
+		return number ** 2
 
 number = 6, 8, [8], 9, 0
 #print("1." ,unmodified_tuple(*number))
@@ -133,6 +137,8 @@ words = ["puppy" , "kitty" , "turtle"]
 output = list(filter(to_uppercase, words))
 print(output)
 
+number = [1 ,3 , 4, 5, 5,7 ,8,10]
 
+output = list(map(square , number))
 
-
+print(output)
