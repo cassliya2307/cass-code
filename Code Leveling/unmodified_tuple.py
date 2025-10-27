@@ -118,8 +118,8 @@ def add_ten_percent_plus_price(price):
 
 
 def get_the_sum_of_numbers(number , store):
-	Like my_list =  list(range(1,51))
-		return my_list + store
+		my_list =  list(range(1,51))
+			return my_list + store
 	
 def get_largest_number(number, largest):
 		if number > largest:
