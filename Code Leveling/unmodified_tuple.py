@@ -1,3 +1,5 @@
+from functools import reduce
+
 def unmodified_tuple(*number):
 	number[2].append(5)
 	return number
@@ -110,6 +112,30 @@ def square(number):
 	if number >= 1 and number <= 10:
 		return number ** 2
 
+
+def add_ten_percent_plus_price(price):
+	return price + price * 10//100
+
+
+def get_the_sum_of_numbers(number , store):
+	Like my_list =  list(range(1,51))
+		return my_list + store
+	
+def get_largest_number(number, largest):
+		if number > largest:
+			return largest = number
+
+def concatinate_string(words , letter):
+	return words + " " + letter
+
+
+def get_squares(number):
+	return number ** 2
+
+def get_product(get_squares, num):
+	return number * num
+	
+
 number = 6, 8, [8], 9, 0
 #print("1." ,unmodified_tuple(*number))
 
@@ -141,4 +167,29 @@ number = [1 ,3 , 4, 5, 5,7 ,8,10]
 
 output = list(map(square , number))
 
+print(output)
+
+prices = [100, 200, 300]
+result = list(map(add_ten_percent_to_price,prices))
+
+print(result)
+
+result = reduce(get_the_sum_of_numbers, number)
+print(result)
+
+result = reduce(get_largest_number, number)
+print(result)
+
+
+words = ["I" , "Love", "Anime"]
+output = reduce(concatinate_string , words)
+
+print(output)
+
+
+result = list(map(get_squares , number))
+print(result)
+
+
+output = reduce(get_product,result)
 print(output)
